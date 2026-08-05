@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Attendance: One Check-in/Out per Day</title>
+    <style>
+        body { margin: 0; color: #2e2630; font-family: Arial, Helvetica, sans-serif; background: #fff; }
+        .wrap { max-width: 980px; margin: 0 auto; padding: 24px 24px 56px; }
+        .hero { text-align: center; padding: 20px 0 10px; }
+        .hero img { width: 100%; max-width: 1000px; border-radius: 18px; }
+        h1 { font-size: 38px; margin: 34px 0 12px; color: #2e2630; }
+        h2 { font-size: 29px; margin: 46px 0 18px; color: #714b67; }
+        p { font-size: 18px; line-height: 1.7; color: #5b5359; }
+        .lead { max-width: 780px; margin: 0 auto; font-size: 21px; }
+        .badges { margin: 22px 0 12px; }
+        .badge { display: inline-block; margin: 5px; padding: 9px 15px; border-radius: 20px; background: #f2ebef; color: #714b67; font-weight: 700; }
+        .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 22px; }
+        .card { border: 1px solid #e7e1e5; border-radius: 16px; padding: 22px; background: #faf8fa; }
+        .card strong { display: block; font-size: 20px; margin-bottom: 8px; color: #2e2630; }
+        .card span { font-size: 16px; line-height: 1.6; color: #5b5359; }
+        .shot { width: 100%; margin: 14px 0 28px; border-radius: 16px; border: 1px solid #e7e1e5; }
+        .notice { margin-top: 26px; padding: 20px 22px; border-left: 5px solid #00a09d; background: #eef8f7; border-radius: 10px; }
+        .footer { text-align: center; margin-top: 48px; color: #714b67; font-weight: 700; }
+        @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 30px; } }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="hero">
+        <img src="banner.png" alt="Attendance Daily Limit banner"/>
+        <h1>Attendance: One Check-in/Out per Day</h1>
+        <p class="lead">Prevent accidental duplicate attendance records with an optional, timezone-aware daily protection rule.</p>
+        <div class="badges">
+            <span class="badge">Odoo 18</span>
+            <span class="badge">Community &amp; Enterprise</span>
+            <span class="badge">LGPL-3</span>
+            <span class="badge">Free</span>
+        </div>
+    </div>
+
+    <h2>Why use this module?</h2>
+    <div class="grid">
+        <div class="card"><strong>One record per day</strong><span>Stops a second attendance record for the same employee and local calendar date.</span></div>
+        <div class="card"><strong>Optional setting</strong><span>Activate the protection from Attendances settings and disable it whenever standard behavior is required.</span></div>
+        <div class="card"><strong>Timezone aware</strong><span>Uses the employee or user timezone, with a safe UTC fallback.</span></div>
+        <div class="card"><strong>Concurrency safe</strong><span>A database-level partial unique index helps protect against simultaneous duplicate creation.</span></div>
+    </div>
+
+    <h2>Simple configuration</h2>
+    <img class="shot" src="screenshots/01_settings.png" alt="Attendance protection setting"/>
+
+    <h2>Clear user feedback</h2>
+    <img class="shot" src="screenshots/02_validation.png" alt="Duplicate attendance validation"/>
+
+    <h2>Designed for reliable daily control</h2>
+    <img class="shot" src="screenshots/03_features.png" alt="Module features"/>
+
+    <div class="notice">
+        <strong>Important for existing databases:</strong>
+        <p>When the rule is enabled, existing same-day duplicate records are consolidated. The earliest record is retained, the latest available check-out is preserved, and additional duplicate records are removed. Back up the database before enabling the option in production.</p>
+    </div>
+
+    <p class="footer">Developed and maintained by AP Odoo Labs</p>
+</div>
+</body>
+</html>
