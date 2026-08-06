@@ -1,7 +1,7 @@
 Attendance: One Check-in/Out per Day
 ====================================
 
-A lightweight Odoo 18 add-on that optionally limits every employee to one
+A lightweight Odoo 19 add-on that optionally limits every employee to one
 attendance record per local calendar day.
 
 Features
@@ -37,7 +37,7 @@ may already contain duplicate daily attendance records.
 Compatibility
 -------------
 
-* Odoo 18.0 Community and Enterprise
+* Odoo 19.0 Community and Enterprise
 * Requires the standard ``hr_attendance`` module
 
 License
