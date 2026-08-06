@@ -2,8 +2,8 @@
 {
     'name': 'HR Attendance Control',
     'summary': 'Check-in/out with polygon-based office validation',
-    'version': '18.0.1.3.0',
-    'author': 'AP Odoo Labs',
+    'version': '19.0.1.0.0',
+    'author': 'Adi Pramono, AP Odoo Labs',
     'license': 'OPL-1',
     'category': 'Human Resources',
     'website': 'https://apodoolabs.com/',
