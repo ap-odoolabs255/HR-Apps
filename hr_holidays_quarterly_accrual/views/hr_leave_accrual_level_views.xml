@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_leave_accrual_level_form_quarterly" model="ir.ui.view">
+        <field name="name">hr.leave.accrual.level.form.quarterly</field>
+        <field name="model">hr.leave.accrual.level</field>
+        <field name="inherit_id" ref="hr_holidays.hr_accrual_level_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//span[@name='yearly']" position="before">
+                <span name="quarterly" invisible="frequency != 'quarterly'">
+                    every 3 months from the Allocation Start Date
+                </span>
+            </xpath>
+        </field>
+    </record>
+</odoo>
