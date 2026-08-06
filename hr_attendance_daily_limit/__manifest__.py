@@ -2,7 +2,7 @@
 {
     "name": "Attendance: One Check-in/Out per Day",
     "summary": "Optional protection that limits each employee to one attendance record per local calendar day.",
-    "version": "18.0.1.5.0",
+    "version": "19.0.1.0.0",
     "license": "LGPL-3",
     "author": "AP Odoo Labs",
     "maintainer": "AP Odoo Labs",
