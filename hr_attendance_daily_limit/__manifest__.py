@@ -8,7 +8,7 @@
     "maintainer": "AP Odoo Labs",
     "website": "https://apodoolabs.com",
     "support": "support@apodoolabs.com",
-    "category": "Human Resources/Attendances",
+    "category": "Generic Modules/Human Resources",
     "depends": ["hr_attendance"],
     "data": [
         "views/res_config_settings_views.xml",
