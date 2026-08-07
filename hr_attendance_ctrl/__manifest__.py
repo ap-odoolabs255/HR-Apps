@@ -5,7 +5,7 @@
     'version': '18.0.1.3.0',
     'author': 'AP Odoo Labs',
     'license': 'OPL-1',
-    'category': 'Human Resources',
+    'category': 'Generic Modules/Human Resources',
     'website': 'https://apodoolabs.com/',
     'depends': ['base', 'web', 'hr', 'hr_attendance'],
     'data': [
