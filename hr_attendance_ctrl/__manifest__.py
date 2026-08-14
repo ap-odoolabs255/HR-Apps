@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'HR Attendance Control',
+    'summary': 'Record check-in/out office from GPS polygons',
+    'version': '19.0.1.1.3',
+    'author': 'AP Odoo Labs',
+    'maintainer': 'AP Odoo Labs',
+    'license': 'OPL-1',
+    'category': 'Generic Modules/Human Resources',
+    'website': 'https://apodoolabs.com/',
+    'depends': ['base', 'web', 'hr', 'hr_attendance'],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/action_map_editor.xml',
+        'views/office_location_views.xml',
+        'views/hr_attendance_views.xml',
+    ],
+    'assets': {
+        'web.assets_backend': [
+            'hr_attendance_ctrl/static/src/js/geo_cache_patch.js',
+            'hr_attendance_ctrl/static/src/js/attendance_coordinates_patch.js',
+            'hr_attendance_ctrl/static/src/js/geom_wkt_map_button.js',
+            'hr_attendance_ctrl/static/src/xml/*.xml',
+            'hr_attendance_ctrl/static/src/js/inject_office_label.js',
+            'hr_attendance_ctrl/static/src/js/attendance_loading_patch.js',
+            'hr_attendance_ctrl/static/src/css/attendance_left.css',
+            'hr_attendance_ctrl/static/src/js/attendance_left_observer.js',
+        ],
+    },
+    'images': ['static/description/banner.png'],
+    'support': 'support@apodoolabs.com',
+    'price': 149.0,
+    'currency': 'USD',
+    'installable': True,
+    'application': False,
+}

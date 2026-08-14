@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_office_location_manager,access.office.location.manager,model_office_location,hr_attendance.group_hr_attendance_manager,1,1,1,1

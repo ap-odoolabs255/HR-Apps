@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HR Attendance Control</title>
+  <style>
+    body{margin:0;background:#f6f7f9;color:#25313c;font-family:Arial,sans-serif;line-height:1.6}
+    .wrap{max-width:1000px;margin:auto;padding:28px}.card{background:#fff;border:1px solid #e3e7eb;border-radius:14px;padding:28px;margin-bottom:20px}
+    .hero{text-align:center}.hero h1{font-size:38px;margin:0 0 8px}.subtitle{color:#52606d;font-size:18px}.banner,.shot{max-width:100%;height:auto;border-radius:10px}
+    .badges span{display:inline-block;background:#714b67;color:#fff;border-radius:20px;padding:5px 12px;margin:4px}h2{color:#714b67}code{background:#f1f3f5;padding:2px 5px}
+    .notice{background:#fff5db;border-left:4px solid #f0ad00;padding:14px}.footer{text-align:center;color:#68737d;padding:20px}
+  </style>
+</head>
+<body><main class="wrap">
+  <section class="card hero">
+    <h1>HR Attendance Control</h1>
+    <p class="subtitle">Polygon-based office identification for Odoo 19 Attendance</p>
+    <div class="badges"><span>Odoo 19</span><span> OPL-1</span><span> PostGIS</span><span> GPS</span></div>
+    <img class="banner" src="banner.png" alt="HR Attendance Control"  style="width: 800px; height: auto;" />
+  </section>
+
+  <section class="card"><p><h2>Overview</h2>
+    <p>Record the office associated with each employee check-in and check-out. The module compares browser GPS coordinates with administrator-defined PostGIS polygons and stores the matching office on the attendance record.</p>
+    <div class="notice"><strong>Identification, not enforcement:</strong> attendance outside configured polygons is recorded as outside the office. This version does not block the attendance action.</div>
+  </section>
+
+  <section class="card"><h2>Features</h2><ul>
+    <li>Configure multiple office polygons using WKT or the included map editor.</li>
+    <li>Display the detected office and GPS coordinates in the attendance menu.</li>
+    <li>Store check-in/check-out latitude, longitude, and matching office.</li>
+    <li>Show office information in attendance form and list views.</li>
+    <li>Loading guard and short-lived geolocation cache for a smoother systray workflow.</li>
+    <li>No analytics, telemetry, or remotely downloaded executable code.</li>
+  </ul></section>
+
+  <section class="card"><h2>Requirements and availability</h2><ul>
+    <li>Odoo 19 Community or Enterprise.</li>
+    <li>Odoo.sh or on-premise deployment; not compatible with Odoo Online.</li>
+    <li>PostgreSQL with PostGIS installed and enabled using <code>CREATE EXTENSION IF NOT EXISTS postgis;</code>.</li>
+    <li>HTTPS and browser location permission for GPS access.</li>
+    <li>The polygon editor loads OpenStreetMap tile images and requires internet access while editing.</li>
+  </ul></section>
+
+  <section class="card"><h2>Configuration</h2><ol>
+    <li>Enable PostGIS before installing the module.</li>
+    <li>Install the module and open Attendances &gt; Office Locations.</li>
+    <li>Create an office and draw or paste its polygon boundary.</li>
+    <li>Use the standard Odoo systray Check In / Check Out action.</li>
+    <li>Review the saved GPS and office fields on the attendance record.</li>
+  </ol></section>
+
+  <section class="card"><h2>Privacy</h2>
+    <p>After the user grants browser permission, GPS coordinates are read and stored on check-in/check-out together with the matching configured office. The module does not collect usage statistics. OpenStreetMap receives standard tile-image requests only when an administrator opens the polygon editor.</p>
+  </section>
+
+  <section class="card"><h2>Screenshots</h2>
+    <p><img class="shot" src="assets/screenshots/01.png" alt="Office location configuration"></p>
+    <p><img class="shot" src="assets/screenshots/02.png" alt="Attendance location result"></p>
+    <p><img class="shot" src="assets/screenshots/03.png" alt="Polygon editor"></p>
+    <p><img class="shot" src="assets/screenshots/04.png" alt="Attendance user experience"></p>
+  </section>
+
+  <section class="card"><h2>Support</h2><p>Installation, configuration, and product support: <a href="mailto:support@apodoolabs.com">support@apodoolabs.com</a></p></section>
+  <div class="footer">Copyright 2025-2026 AP Odoo Labs. All rights reserved.</div>
+</main></body></html>
