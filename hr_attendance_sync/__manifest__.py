@@ -11,6 +11,7 @@ history in Odoo, and create or update daily employee attendance records.
     """,
     "category": "Human Resources/Attendances",
     "website": "https://apodoolabs.com/",
+    "support": "support@apodoolabs.com",
     "author": "AP Odoo Labs",
     "maintainer": "AP Odoo Labs",
     "license": "LGPL-3",
