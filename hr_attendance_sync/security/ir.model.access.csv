@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dahua_device_config_system,Dahua device configuration,model_dahua_device_config,base.group_system,1,1,1,1
+access_dahua_schedule_config_system,Dahua schedule configuration,model_dahua_schedule_config,base.group_system,1,1,1,1
+access_dahua_attendance_log_system,Dahua attendance log,model_dahua_attendance_log,base.group_system,1,1,1,1
+access_dahua_attendance_policy_system,Dahua attendance exclusion,model_dahua_attendance_policy,base.group_system,1,1,1,1

@@ -1,0 +1,78 @@
+<section class="oe_container" style="background-color: #f5f8fc; color: #243047; padding: 24px 16px;">
+    <div class="oe_row oe_spaced" style="max-width: 960px; margin: 0 auto;">
+        <div class="oe_span12" style="background-color: #ffffff; border: 1px solid #dbe5f3; border-radius: 16px; padding: 24px; text-align: center;">
+            <img src="banner.png" alt="Dahua HR Attendance Sync workflow" style="display: block; width: 100%; max-width: 912px; height: auto; margin: 0 auto;"/>
+            <h1 style="color: #123f91; margin: 18px 0 4px;">Dahua HR Attendance Sync</h1>
+            <p style="color: #52627a; font-size: 16px; line-height: 1.6; margin: 0;">A free, native Odoo 18 connector for Dahua access-control attendance logs.</p>
+        </div>
+    </div>
+    <div class="oe_row oe_spaced" style="max-width: 960px; margin: 16px auto 0;">
+        <div class="oe_span6" style="padding: 8px;">
+            <div style="height: 100%; background-color: #ffffff; border: 1px solid #dbe5f3; border-radius: 16px; padding: 24px;">
+                <h2 style="color: #123f91; margin: 0 0 12px;">What it does</h2>
+                <ul style="font-size: 16px; line-height: 1.6; margin-bottom: 0;">
+                    <li>Connects to multiple Dahua devices using Digest authentication.</li>
+                    <li>Keeps an auditable, duplicate-safe copy of imported events in Odoo.</li>
+                    <li>Maps device users to employees with a unique Dahua User ID.</li>
+                    <li>Uses the first and last punch of each local day for attendance.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="oe_span6" style="padding: 8px;">
+            <div style="height: 100%; background-color: #ffffff; border: 1px solid #dbe5f3; border-radius: 16px; padding: 24px;">
+                <h2 style="color: #123f91; margin: 0 0 12px;">Built for safe deployment</h2>
+                <ul style="font-size: 16px; line-height: 1.6; margin-bottom: 0;">
+                    <li>No custom PostgreSQL table or second database connection.</li>
+                    <li>No dependency on third-party Odoo fields.</li>
+                    <li>Configuration and device credentials are restricted to Settings administrators.</li>
+                    <li>Scheduled actions are disabled until an administrator completes setup.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="oe_row oe_spaced" style="max-width: 960px; margin: 16px auto 0;">
+        <div class="oe_span12" style="background-color: #ffffff; border: 1px solid #dbe5f3; border-radius: 16px; padding: 24px;">
+            <h2 style="color: #123f91; margin: 0 0 12px;">Quick setup</h2>
+            <ol style="font-size: 16px; line-height: 1.6;">
+                <li>Install the module and add devices under <strong>Settings &gt; Technical &gt; Dahua Attendance</strong>.</li>
+                <li>Set the <strong>Dahua User ID</strong> on each employee and choose the business timezone.</li>
+                <li>Test connectivity, run each scheduled action manually, then enable both schedules.</li>
+            </ol>
+            <p style="background-color: #eef5ff; border-left: 4px solid #1f5fbf; padding: 12px 16px; margin: 16px 0 0; font-size: 16px; line-height: 1.6;">The Odoo server needs network access to the devices. TLS verification is enabled by default and should only be disabled for a trusted device with a self-signed certificate.</p>
+        </div>
+    </div>
+    <div class="oe_row oe_spaced" style="max-width: 960px; margin: 16px auto 0;">
+        <div class="oe_span12" style="background-color: #ffffff; border: 1px solid #dbe5f3; border-radius: 16px; padding: 24px;">
+            <h2 style="color: #123f91; margin: 0 0 8px; text-align: center;">Scheduled Actions</h2>
+            <p style="color: #52627a; font-size: 16px; line-height: 1.6; margin: 0 0 18px; text-align: center;">The module creates two hourly scheduled actions. Both are disabled by default so an administrator can review the configuration and test them before activation.</p>
+            <img src="Scheduled-Actions.png" alt="Dahua Attendance scheduled actions in Odoo" style="display: block; width: 100%; max-width: 1327px; height: auto; margin: 0 auto 20px; border: 1px solid #dbe5f3; border-radius: 8px;"/>
+            <div style="background-color: #f8fbff; border: 1px solid #dbe5f3; border-radius: 12px; padding: 18px; margin-bottom: 12px;">
+                <h3 style="color: #123f91; margin: 0 0 8px; font-size: 20px;">Dahua Attendance: Import device logs</h3>
+                <p style="font-size: 16px; line-height: 1.6; margin: 0;">Connects to every active Dahua device and imports access-control events for the configured period. Imported events are stored as duplicate-safe Dahua attendance logs, providing an auditable source before employee attendance records are created.</p>
+            </div>
+            <div style="background-color: #f8fbff; border: 1px solid #dbe5f3; border-radius: 12px; padding: 18px;">
+                <h3 style="color: #123f91; margin: 0 0 8px; font-size: 20px;">Dahua Attendance: Synchronize attendances</h3>
+                <p style="font-size: 16px; line-height: 1.6; margin: 0;">Matches unsynchronized device logs to employees by Dahua User ID, groups punches by employee and local business day, then creates or updates Odoo attendance using the first punch as check-in and the last punch as check-out.</p>
+            </div>
+        </div>
+    </div>
+    <div class="oe_row oe_spaced" style="max-width: 960px; margin: 16px auto 0;">
+        <div class="oe_span6" style="padding: 8px;">
+            <div style="height: 100%; background-color: #ffffff; border: 1px solid #dbe5f3; border-radius: 16px; padding: 24px;">
+                <h2 style="color: #123f91; margin: 0 0 12px;">Compatibility</h2>
+                <p style="font-size: 16px; line-height: 1.6; margin: 0;">Odoo 18.0 Community and Enterprise. Requires the standard Python packages <code>requests</code> and <code>pytz</code>.</p>
+            </div>
+        </div>
+        <div class="oe_span6" style="padding: 8px;">
+            <div style="height: 100%; background-color: #ffffff; border: 1px solid #dbe5f3; border-radius: 16px; padding: 24px;">
+                <h2 style="color: #123f91; margin: 0 0 12px;">License &amp; support</h2>
+                <p style="font-size: 16px; line-height: 1.6; margin: 0;">Released under LGPL-3 by AP Odoo Labs. Documentation is included in the module README.</p>
+            </div>
+        </div>
+    </div>
+    <div class="oe_row" style="max-width: 960px; margin: 16px auto 0;">
+        <div class="oe_span12">
+            <p style="color: #69778e; font-size: 13px; text-align: center; margin: 0;">Copyright 2026 AP Odoo Labs</p>
+        </div>
+    </div>
+</section>

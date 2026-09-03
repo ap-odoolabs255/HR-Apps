@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <record id="ir_cron_dahua_import_logs" model="ir.cron">
+        <field name="name">Dahua Attendance: Import device logs</field>
+        <field name="model_id" ref="model_dahua_attendance_service"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_import_logs()</field>
+        <field name="interval_number">1</field><field name="interval_type">hours</field><field name="active" eval="False"/>
+    </record>
+    <record id="ir_cron_dahua_sync_attendance" model="ir.cron">
+        <field name="name">Dahua Attendance: Synchronize attendances</field>
+        <field name="model_id" ref="model_dahua_attendance_service"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_sync_attendance()</field>
+        <field name="interval_number">1</field><field name="interval_type">hours</field><field name="active" eval="False"/>
+    </record>
+</odoo>
